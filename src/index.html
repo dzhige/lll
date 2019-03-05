@@ -1,0 +1,74 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+&lt;!&ndash;    <span>登录</span>
+    <span>注册</span>
+    <hr/>
+    <div>
+        <login-form></login-form>
+        <register-form></register-form>
+    </div>&ndash;&gt;
+    &lt;!&ndash;router-link来指定跳转的路径&ndash;&gt;
+    <span><router-link to="/login">登录</router-link></span>
+    <span><router-link to="/register">注册</router-link></span>
+    <hr/>
+    <div>
+        &lt;!&ndash;vue-router的锚点&ndash;&gt;
+        <router-view></router-view>
+    </div>
+</div>
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script src="../node_modules/vue-router/dist/vue-router.js"></script>
+<script src="js/login.js"></script>
+<script src="js/register.js"></script>
+<script type="text/javascript">
+    // 创建VueRouter对象
+    const router = new VueRouter({
+        routes:[ // 编写多个路由规则
+            {
+                path:"/login", // 请求路径
+                component:loginForm // 组件名称
+            },
+            {path:"/register",component:registerForm},
+        ]
+    })
+
+    var vm = new Vue({
+        el:"#app",
+        components:{// 引用登录和注册组件
+            loginForm,
+            registerForm
+        },
+        router
+    });
+
+</script>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <!--router-link来指定跳转的路径-->
+    <span><router-link to="/login">登录</router-link></span>
+    <span><router-link to="/register">注册</router-link></span>
+    <hr/>
+    <div>
+        <!--vue-router的锚点-->
+        <router-view></router-view>
+    </div>
+</div>
+<script src="../dist/build.js"></script>
+</body>
+</html>
